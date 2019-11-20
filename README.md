@@ -1,2 +1,2 @@
 # springDemoAnnotations
-Spring Demo Using Java Annotation Configuration.
+Spring Demo Using Annotation Configuration.
