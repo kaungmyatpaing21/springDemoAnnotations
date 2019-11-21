@@ -2,11 +2,22 @@ package com.luv2code.springdemo;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Random;
+
 @Component
 public class RandomFortuneService implements FortuneService {
 
+    private String[] data = {
+      "Beware of the wolf in sheep's clothing",
+            "Diligence is the mother of good luck",
+            "The Journey is the reward"
+    };
+
+    Random myRandom = new Random();
+
     @Override
     public String getFortune() {
-        return "Random Fortune: you are lucky today.";
+        int index = myRandom.nextInt(data.length);
+        return data[index];
     }
 }
