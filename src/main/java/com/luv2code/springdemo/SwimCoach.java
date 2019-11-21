@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component;
 public class SwimCoach implements Coach {
 
     @Autowired
-    @Qualifier("databaseFortune")
+    @Qualifier("practiceFortuneService")
     private FortuneService fortuneService;
 
-    @Value("${foo.email}")
-    private String email;
-
-    @Value("${foo.team}")
-    private String team;
+//    @Value("${foo.email}")
+//    private String email;
+//
+//    @Value("${foo.team}")
+//    private String team;
 
     public SwimCoach(){
         // no-argument constructor
@@ -32,12 +32,12 @@ public class SwimCoach implements Coach {
         return fortuneService.getFortune();
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getTeam() {
-        return team;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public String getTeam() {
+//        return team;
+//    }
 
 }
