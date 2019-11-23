@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
 public class SwimCoach implements Coach {
 
@@ -20,6 +23,18 @@ public class SwimCoach implements Coach {
 
     public SwimCoach(){
         // no-argument constructor
+    }
+
+    // init method
+    @PostConstruct
+    public void doMyStartupWork(){
+        System.out.println("After Bean Construct: Inside the doMyStartupWork.");
+    }
+
+    // Destroy method
+    @PreDestroy
+    public void doMyFinishedWork(){
+        System.out.println("After Bean Destroy: Inside the doMyFinishedWork.");
     }
 
     @Override

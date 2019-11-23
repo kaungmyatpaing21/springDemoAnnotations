@@ -20,7 +20,7 @@ public class PracticeFortuneService implements FortuneService {
 
     private String[] data;
 
-    @PostConstruct
+    @PostConstruct // this code will be execute after the bean is constructed
     public void setupMyData(){
         data = new String[3];
         data[0] = fortune1;
